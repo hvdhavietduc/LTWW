@@ -1,0 +1,171 @@
+.Trangchitiet{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 0 20px 0 20px;
+    border-radius: 10px;
+    width: 70%;
+}
+.thongtinchitietsp{
+    display: flex;
+}
+.anhminhhoa{
+    width: 50%;
+    text-align: center;
+    height: 500px;
+}
+.anhminhhoa .mainimg{
+    width: 100%;
+ 
+}
+.anhminhhoa .phuimg{
+    width: 49%;
+}
+.thongtin h1{
+    font-size: 30px;
+    margin: 0;
+
+}
+.thongtin p{
+    font-size: 20px;
+}
+
+.thongtin{
+    width: 50%;
+    padding: 0px 0px 0 50px;
+   
+}
+
+.sizegiay{
+    display: inline-block;
+    padding: 2% 4%;
+    margin:0;
+    background: #fff;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.active, .sizegiay:hover, .mausacgiay:hover {
+    background: #000;
+    color: #fff;
+}
+
+.mausacgiay{
+    display: inline-block;
+    margin: 0px 10px 10px 0;
+    background: #fff;   
+    padding: 10px 0;
+    width: 20%;
+    border: 3px solid #000000;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+}
+.giatien{
+    color: red;
+}
+.soluong{
+    height: 50px;
+    width: fit-content;
+}
+.soluong button{
+    cursor: pointer;
+}
+.soluong span, .soluong button{
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 20px;
+    border: 1px solid rgb(228, 228, 228);
+}
+.dattruocandtv{
+    width: 100%;
+}
+.dattruoc, .tuvan{
+    
+    height: 50px;
+    margin: auto;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.dattruoc{
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+    width: 40%;
+}
+.tuvan{
+    font-size: 20px;
+    width: fit-content;
+    border: 2px solid ;
+}
+.dattruoc:hover{
+    background-color: white;
+    color: black;
+}
+.card-header{
+    margin-top: 20px;
+    padding: 0;
+    border-top: 1px solid rgb(193, 193, 193);
+}
+.card-header p{
+    justify-content: center;
+}
+
+@media only screen and (max-width : 992px){
+    .Trangchitiet{
+        width: 90%;
+    }
+    .thongtinchitietsp{
+        display: flex;
+        flex-direction: column;
+    }
+    .anhminhhoa{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .anhminhhoa .mainimg{
+        width: 100%;
+     
+    }
+    .anhminhhoa .phuimg{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .thongtin{
+        width: 100%;
+    }
+}
+@media only screen and (max-width : 768px){
+    .Trangchitiet{
+        width: 90%;
+    }
+    .thongtinchitietsp{
+        display: flex;
+        flex-direction: column;
+    }
+    .anhminhhoa{
+        width: 100%;
+        display: flex;
+    }
+    .anhminhhoa .mainimg{
+        width: 100%;
+     
+    }
+    .anhminhhoa .phuimg{
+        width: 15.5%;
+        margin: 0;
+        display: inline;
+    }
+    .thongtin{
+        width: 100%;
+    }
+}
