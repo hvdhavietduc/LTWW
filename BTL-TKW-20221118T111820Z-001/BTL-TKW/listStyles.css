@@ -23,13 +23,17 @@ h1 {
 .product-item {
   float: left;
   width: 23%;
+  height: 470px;
   margin: 1%;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   line-height: 26px;
 }
-
+.nameandprice{
+  width: 100%;
+  height: 20%;
+}
 .product-item label {
   font-weight: bold;
 }
@@ -81,7 +85,7 @@ a {
 }
 
 .buy-button {
-  margin: 10px 30%;
+  margin: 10px 30% ;
   width: 200px;
 }
 

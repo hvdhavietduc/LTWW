@@ -18,12 +18,12 @@
     $offset = ($current_page - 1) * $item_per_page;
     $products = mysqli_query(
       $db->link,
-      "SELECT * FROM `tblproduct` ORDER BY `id` ASC  LIMIT " .
+      "SELECT * FROM `tblproduct`  WHERE gender='1' ORDER BY `id` ASC  LIMIT " .
         $item_per_page .
         " OFFSET " .
         $offset
     );
-    $sql = "SELECT * FROM `tblproduct`";
+    $sql = "SELECT * FROM `tblproduct` WHERE gender='1'";
 
     $totalRecords = $db->select($sql);
     $totalRecords = $totalRecords->num_rows;
