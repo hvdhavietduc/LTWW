@@ -9,7 +9,13 @@
 </head>
 
 <body>
+    <?php
+        include "../../BTL-LTW/BTL-LTW/header/header.php";
 
+    ?>
+    <style>
+        <?php include '../../BTL-LTW/BTL-LTW/header/header.css'; ?>
+    </style>
     <?php
     include "database.php";
     $db = new Database();
@@ -30,7 +36,7 @@
     $totalPages = ceil($totalRecords / $item_per_page);
     ?>
     <div class="imgheader">
-            <img src="img/imgheader.png">
+            <img src="img/front_img.jpg">
     </div>
     <div class="container">
         <h1>Danh sách sản phẩm nữ</h1>

@@ -9,7 +9,13 @@
 </head>
 
 <body>
+    <?php
+        include "../../BTL-LTW/BTL-LTW/header/header.php";
 
+    ?>
+    <style>
+        <?php include '../../BTL-LTW/BTL-LTW/header/header.css'; ?>
+    </style>
     <?php
     include "database.php";
     $db = new Database();
