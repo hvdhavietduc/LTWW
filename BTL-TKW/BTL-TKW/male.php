@@ -33,7 +33,7 @@
             <img src="img/imgheader.png">
     </div>
     <div class="container">
-        <h1>Danh sách sản phẩm</h1>
+        <h1>Danh sách sản phẩm nam</h1>
         <div class="product-items">
             <?php while ($row = mysqli_fetch_array($products)) { ?>
             <div class="product-item">
