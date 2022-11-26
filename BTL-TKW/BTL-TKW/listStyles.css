@@ -24,7 +24,7 @@ h1 {
 .product-item {
   float: left;
   width: 23%;
-  height: 470px;
+  height: 400px;
   margin: 1%;
   padding: 10px;
   box-sizing: border-box;
@@ -88,6 +88,7 @@ a {
 .buy-button {
   margin: 10px 30% ;
   width: 200px;
+ 
 }
 
 .buy-button a {
