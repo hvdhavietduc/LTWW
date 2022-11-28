@@ -1,22 +1,21 @@
 body {
     margin:0;
     padding:0;
-    background:url("background.jpg");
     background-size:auto;
     background-position: center;
     font-family: sans-serif;
 }
 .loginbox{
     width: 320px;
-    height: 65  0px;
     background: rgb(250, 250, 250);
     color: rgb(132, 194, 216);
-    top: 50%;
-    left:50%;
+    top: 1%;
+    left:40%;
     position:absolute;
-    transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    transform: scaleY(0.85);
+    transform: translateX(-50%,-50%);
 }
 .avatar{
     width: 100px;
