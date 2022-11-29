@@ -14,7 +14,8 @@
 
     ?>
     <style>
-        <?php include '../../BTL-LTW/BTL-LTW/header/header.css'; ?>
+    <?php include '../../BTL-LTW/BTL-LTW/header/header.css';
+    ?>
     </style>
     <?php
     include "database.php";
@@ -36,7 +37,7 @@
     $totalPages = ceil($totalRecords / $item_per_page);
     ?>
     <div class="imgheader">
-            <img src="img/imgheader.png">
+        <img src="img/imgheader.png">
     </div>
     <div class="container">
         <h1>Danh sách sản phẩm nam</h1>
@@ -44,7 +45,8 @@
             <?php while ($row = mysqli_fetch_array($products)) { ?>
             <div class="product-item">
                 <div class="product-img">
-                    <a href="detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
+                    <a href="detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>"
+                            title="<?= $row["name"] ?>"></img></a>
                 </div>
                 <div class="nameandprice">
                     <strong><a href="detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
@@ -55,7 +57,7 @@
                     "."
                     ) ?> đ</span><br />
                 </div>
-                
+
                 <div class="buy-button">
                     <a href="detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
                 </div>
