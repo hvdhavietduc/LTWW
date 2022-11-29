@@ -10,14 +10,14 @@
 
 <body>
     <?php
-        include "../../BTL-LTW/BTL-LTW/header/header.php";
+        include "../header/header.php";
 
     ?>
     <style>
-        <?php include '../../BTL-LTW/BTL-LTW/header/header.css'; ?>
+        <?php include '../header/header.css'; ?>
     </style>
     <?php
-    include "database.php";
+    include "../Database_connect/database.php";
     $db = new Database();
     $item_per_page = !empty($_GET["per_page"]) ? $_GET["per_page"] : 16;
     $current_page = !empty($_GET["page"]) ? $_GET["page"] : 1;
@@ -36,7 +36,7 @@
     $totalPages = ceil($totalRecords / $item_per_page);
     ?>
     <div class="imgheader">
-            <img src="img/front_img.jpg">
+            <img src="../img/front_img.jpg">
     </div>
     <div class="container">
         <h1>Danh sách sản phẩm nữ</h1>
@@ -44,10 +44,10 @@
             <?php while ($row = mysqli_fetch_array($products)) { ?>
             <div class="product-item">
                 <div class="product-img">
-                    <a href="detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
+                    <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
                 </div>
                 <div class="nameandprice">
-                    <strong><a href="detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
+                    <strong><a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
                     <label>Giá: </label><span class="product-price"><?= number_format(
                     $row["price"],
                     0,
@@ -57,7 +57,7 @@
                 </div>
                 
                 <div class="buy-button">
-                    <a href="detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
+                    <a href="../detail/detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
                 </div>
             </div>
             <?php } ?>
@@ -68,7 +68,7 @@
         </div>
     </div>
     <?php
-        include "../../BTL-LTW/BTL-LTW/footer/index.html"
+        include "../footer/footer.php"
     ?>
 </body>
 
