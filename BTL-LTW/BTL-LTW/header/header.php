@@ -33,10 +33,10 @@
       </div>
       <div class="navbar">
         <ul class="navbar">
-          <li class="navbar"><a href="../../BTL-LTW/BTL-LTW/homepage/index.php" class="navbar" >Home</a></li>
-          <li class="navbar"><a href="trangchu.php" class="navbar" >Cửa hàng</a></li>
-          <li class="navbar"><a href="male.php" class="navbar">Nam</a></li>
-          <li class="navbar"><a href="female.php" class="navbar">Nữ</a></li>
+          <li class="navbar"><a href="LTWW/BTL-LTW/BTL-LTW/homepage/index.php" class="navbar" >Home</a></li>
+          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/trangchu.php" class="navbar" >Cửa hàng</a></li>
+          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/male.php" class="navbar">Nam</a></li>
+          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/female.php" class="navbar">Nữ</a></li>
           
         </ul>
       </div>

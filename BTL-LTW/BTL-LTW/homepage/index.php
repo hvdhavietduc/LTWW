@@ -40,7 +40,7 @@
           
         </ul>
         <div class="account_cart">
-          <a href="../login/index.html" class="account_cart"><img src="avatar.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+          <a href="../login/index.php" class="account_cart"><img src="avatar.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
           <a href="#" class="account_cart"><img src="cart.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
         </div>
       </div>

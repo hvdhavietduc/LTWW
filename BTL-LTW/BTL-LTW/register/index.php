@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <?php include "../header/index.html" ?>
+    <?php include "../header/header.php" ?>
     <div class="loginbox">
         <img src="avatar.png" class="avatar">
         <h1>Register</h1>

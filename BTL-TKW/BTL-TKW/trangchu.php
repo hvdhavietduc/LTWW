@@ -70,6 +70,9 @@
             <div class="clear-both"></div>
         </div>
     </div>
+    <?php
+        include "../../BTL-LTW/BTL-LTW/footer/index.html"
+    ?>
 </body>
 
 </html>

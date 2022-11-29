@@ -96,6 +96,9 @@
             </div>
         </div>
     </div>
+    <?php
+        include "../../BTL-LTW/BTL-LTW/footer/index.html"
+    ?>
 </body>
 <script>
     function decrease(){
