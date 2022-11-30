@@ -8,6 +8,9 @@
   </head>
   <body>
     <?php include "../header/header.php" ?>
+    <style>
+        <?php include "../header/header.css" ?>
+    </style>
     <div class="loginbox">
         <img src="avatar.png" class="avatar">
         <h1>Register</h1>
@@ -27,9 +30,14 @@
 
         </form>
     </div>
-    <footer>
-    <?php include "../footer/index.html" ?>
-    </footer>
+    <div class="row"></div>
+    <div class="footer">
+      <?php include "../footer/footer.php" ?>
+    </div>
+
+    <style>
+        <?php include "../footer/footer.css" ?>
+    </style>
   </body>
 
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HomePage</title>
-    <link rel="stylesheet" href="../../BTL-LTW/header/header.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -33,11 +33,12 @@
       </div>
       <div class="navbar">
         <ul class="navbar">
-          <li class="navbar"><a href="LTWW/BTL-LTW/BTL-LTW/homepage/index.php" class="navbar" >Home</a></li>
-          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/trangchu.php" class="navbar" >Cửa hàng</a></li>
-          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/male.php" class="navbar">Nam</a></li>
-          <li class="navbar"><a href="LTWW/BTL-TKW/BTL-TKW/female.php" class="navbar">Nữ</a></li>
+          <li class="navbar"><a href="../homepage/index.php" class="navbar" >Home</a></li>
+          <li class="navbar"><a href="../listsp/trangchu.php" class="navbar" >Cửa hàng</a></li>
+          <li class="navbar"><a href="../listsp/male.php" class="navbar">Nam</a></li>
+          <li class="navbar"><a href="../listsp/female.php" class="navbar">Nữ</a></li>
           
         </ul>
       </div>
+</body>
       

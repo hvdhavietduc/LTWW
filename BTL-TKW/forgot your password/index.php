@@ -9,6 +9,9 @@
   </head>
   <body>
     <?php include "../header/header.php" ?>
+      <style>
+        <?php include '../header/header.css'; ?>
+    </style>
     <div class="loginbox">
         <img src="avatar.png" class="avatar">
         <h1>Reset Password</h1>
@@ -19,11 +22,17 @@
             <input type="text" name="" placeholder="Enter Email">
             <p>Phone Number</p>
             <input type="text" name="" placeholder="Enter Phone Number">
+            <!-- <input type="submit" name="" value="Login"><br> -->
             <input type="submit" name="" value="Reset Password"><br> 
             <a href="../login/index.php">Already had an account? Sign in</a>
 
         </form>
     </div>
-    <?php include "../footer/index.html"?>
+    <div class="footer">
+      <?php include "../footer/footer.php" ?>
+    </div>
+    <style>
+        <?php include '../footer/footer.css'; ?>
+    </style>
   </body>
 </html>

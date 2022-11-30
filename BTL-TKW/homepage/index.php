@@ -34,9 +34,9 @@
       <div class="navbar">
         <ul class="navbar">
           <li class="navbar"><a href="#" class="navbar" >Home</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/trangchu.php" class="navbar" >Cửa hàng</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/male.php" class="navbar">Nam</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/female .php" class="navbar">Nữ</a></li>
+          <li class="navbar"><a href="../listsp/trangchu.php" class="navbar" >Cửa hàng</a></li>
+          <li class="navbar"><a href="../listsp/male.php" class="navbar">Nam</a></li>
+          <li class="navbar"><a href="../listsp/female .php" class="navbar">Nữ</a></li>
           
         </ul>
         <div class="account_cart">

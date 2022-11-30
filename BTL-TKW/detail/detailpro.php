@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-        include "database.php";
+        include "../Database_connect/database.php";
         $db=new Database();
     ?>
     <div class="Trangchitiet">
@@ -97,7 +97,7 @@
         </div>
     </div>
     <?php
-        include "../../BTL-LTW/BTL-LTW/footer/index.html"
+        include "../footer/footer.php"
     ?>
 </body>
 <script>
