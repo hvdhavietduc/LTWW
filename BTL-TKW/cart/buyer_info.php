@@ -11,13 +11,20 @@
 <body>
 <?php
         include "../header/header.php";
+        include "../Database_connect/database.php";
+        $db=new Database();
 
     ?>
     <style>
     <?php include '../header/header.css';
     ?>
     </style>
-
+    <?php
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM tblproduct WHERE id='$id'";
+            $products =$db->select($sql);
+            $row = mysqli_fetch_array($products);
+     ?>
     <div class="container" style="padding:0 0 40px 0;">
         <div class="row">
 
@@ -87,9 +94,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <img class="col-md-2" src="images/img2.webp" alt="shoes1" style="width: 20%;">
-                            <div class="col-md-6">
-                                <div style="font-weight: bold; margin-bottom: 1rem;">Giày Đen</div>
+                            <img class="col-md-4" src="<?php echo $row["linkimg"]?>" alt="shoes1" style="width: 30%;">
+                            <div class="col-md-5">
+                                <div style="font-weight: bold; margin-bottom: 1rem;"><?php echo $row["name"]?></div>
                                 <div>Đen/43</div>
                                 <!-- <div class="row" id="item-details">
                                     <div class="col-md-2">900,000</div>
@@ -99,8 +106,8 @@
                                     <div class="col-md-2" style="text-align: right;">900,000</div>
                                 </div> -->
                             </div>
-                            <div class="col-md-4">
-                                900,000
+                            <div class="col-md-3">
+                            <?php echo $row["price"]?>
                             </div>
                         </div>
                     </div>  

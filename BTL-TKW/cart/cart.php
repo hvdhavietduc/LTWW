@@ -10,12 +10,19 @@
 <body>
 <?php
         include "../header/header.php";
-
+        include "../Database_connect/database.php";
+        $db=new Database();
     ?>
     <style>
     <?php include '../header/header.css';
     ?>
     </style>
+    <?php
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM tblproduct WHERE id='$id'";
+            $products =$db->select($sql);
+            $row = mysqli_fetch_array($products);
+     ?>
     <div class="container" style="padding:0 0 40px 0;">
         <div class="row">
 
@@ -29,15 +36,15 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <img class="col-md-2" src="images/img1.webp" alt="shoes1" style="width: 20%;">
+                                <img class="col-md-2" src="<?php echo $row["linkimg"]?>" alt="shoes1" style="width: 20%;">
                                 <div class="col-md-10">
-                                    <div style="font-weight: bold; margin-bottom: 1rem;">Giày Xám</div>
+                                    <div style="font-weight: bold; margin-bottom: 1rem;"><?php echo $row["name"]?></div>
                                     <div class="row" id="item-details">
-                                        <div class="col-md-2">900,000</div>
+                                        <div class="col-md-2"><?php echo $row["price"]?>đ</div>
                                         <div class="col-md-3">Màu sắc:</div>
                                         <div class="col-md-3">Kích thước:</div>
                                         <div class="col-md-2"></div>
-                                        <div class="col-md-2" style="text-align: right;">900,000</div>
+                                        <div class="col-md-2" style="text-align: right;"><?php echo $row["price"]?>đ</div>
                                     </div>
                                 </div>
                                 
@@ -45,44 +52,7 @@
                         </div>  
                     </div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <img class="col-md-2" src="images/img2.webp" alt="shoes1" style="width: 20%;">
-                                <div class="col-md-10">
-                                    <div style="font-weight: bold; margin-bottom: 1rem;">Giày Đen</div>
-                                    <div class="row" id="item-details">
-                                        <div class="col-md-2">900,000</div>
-                                        <div class="col-md-3">Màu sắc:</div>
-                                        <div class="col-md-3">Kích thước:</div>
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-2" style="text-align: right;">900,000</div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <img class="col-md-2" src="images/img3.webp" alt="shoes1" style="width: 20%;">
-                                <div class="col-md-10">
-                                    <div style="font-weight: bold; margin-bottom: 1rem;">Giày Trắng</div>
-                                    <div class="row" id="item-details">
-                                        <div class="col-md-2">900,000</div>
-                                        <div class="col-md-3">Màu sắc:</div>
-                                        <div class="col-md-3">Kích thước:</div>
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-2" style="text-align: right;">900,000</div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>  
-                    </div>
-
+                    
                 </div>
             </div>
 
@@ -97,7 +67,7 @@
                         <li>Phí vận chuyển sẽ được tính ở trang thanh toán</li>
                         <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán</li>
                     </ul>
-                    <a role="button" class="btn btn-dark btn-block" href="buyer_info.php">THANH TOÁN NGAY (Áp dụng cho Việt Nam)</a>
+                    <a role="button" class="btn btn-dark btn-block" href="buyer_info.php?id=<?php echo $row["id"] ?>">THANH TOÁN NGAY (Áp dụng cho Việt Nam)</a>
                     <button type="button" class="btn btn-primary btn-block">ĐẶT HÀNG QUỐC TẾ (Cho các quốc gia khác)</button>
                 </div>
             </div>

@@ -63,7 +63,7 @@
                     <button onclick=increase()>+</button>
                 </div>
                 <div class="dattruocandtv">
-                    <button class="dattruoc">Đặt trước</button>
+                    <a href="../cart/cart.php?id=<?php echo $row["id"] ?>"><button class="dattruoc">Đặt trước</button></a>
                     <button class="tuvan">Tư vấn: 0966 158 666</button>
                 </div>
                 <div class="card-header">
