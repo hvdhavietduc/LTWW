@@ -9,14 +9,22 @@
 </head>
 
 <body>
+<?php
+        include "../header/header.php";
 
-    <div class="container">
+    ?>
+    <style>
+    <?php include '../header/header.css';
+    ?>
+    </style>
+
+    <div class="container" style="padding:0 0 40px 0;">
         <div class="row">
 
             <!-- buyer infomation form-->
             <div class="col-md-7 col-sm-12" style="background-color: white;">
                 <h2>Brand</h2>
-                <nav aria-label="breadcrumb" class="breadcrumb-style"">
+                <nav aria-label="breadcrumb" class="breadcrumb-style">
                     <ol class="breadcrumb" style="background-color: white;">
                       <li class="breadcrumb-item"><a href="#">Giở hàng</a></li>
                       <li class="breadcrumb-item active" aria-current="page"><a href="#">Thông tin giao hàng</a></li>
@@ -103,6 +111,14 @@
         </div>
 
     </div>
-    
+    <?php
+        include "../footer/footer.php"
+    ?>
+    <style>
+        <?php
+        include "../footer/footer.css"
+        
+        ?>
+    </style>
 </body>
 </html>

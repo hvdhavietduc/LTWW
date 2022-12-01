@@ -15,7 +15,10 @@
     </div>
      
     <div class="loginbox">
-      <img src="avatar.png" class="avatar">
+      <div class="avt">
+        <img src="avatar.png" class="avatar">
+      </div>
+      
       <h1>Login Here</h1>
       <form method="post" action="connect.php">
           <p>Username</p>
@@ -27,12 +30,16 @@
           <a href="../register/index.php">Don't have an account?</a>
       </form>
     </div>
-
-    <?php include "../footer/footer.php" ?>
-
+    <?php
+        include "../footer/footer.php"
+    ?>
     <style>
-        <?php include '../footer/footer.css'; ?>
+        <?php
+        include "../footer/footer.css"
+        
+        ?>
     </style>
+    
 </body>
   
   

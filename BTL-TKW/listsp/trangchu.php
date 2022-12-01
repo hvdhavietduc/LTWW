@@ -43,24 +43,26 @@
     </div>
     <div class="container">
         <h1>Danh sách sản phẩm</h1>
-        <div class="product-items">
+        <div class="row">
             <?php while ($row = mysqli_fetch_array($products)) { ?>
-            <div class="product-item">
-                <div class="product-img">
-                    <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
-                </div>
-                <div class="nameandprice">
-                    <strong><a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
-                    <label>Giá: </label><span class="product-price"><?= number_format(
-                    $row["price"],
-                    0,
-                    ",",
-                    "."
-                    ) ?> đ</span><br />
-                </div>
-                
-                <div class="buy-button">
-                    <a href="../detail/detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
+            <div class="product-item  col-lg-3 col-md-4 col-sm-6">
+                <div class="itempro">
+                    <div class="product-img">
+                        <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
+                    </div>
+                    <div class="nameandprice">
+                        <strong><a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
+                        <label>Giá: </label><span class="product-price"><?= number_format(
+                        $row["price"],
+                        0,
+                        ",",
+                        "."
+                        ) ?> đ</span><br />
+                    </div>
+                    
+                    <div class="buy-button">
+                        <a href="../detail/detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
+                    </div>
                 </div>
             </div>
             <?php } ?>
@@ -73,7 +75,12 @@
     <?php
         include "../footer/footer.php"
     ?>
- 
+    <style>
+        <?php
+        include "../footer/footer.css"
+        
+        ?>
+    </style>
     
 </body>
 

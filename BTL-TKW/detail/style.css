@@ -1,11 +1,15 @@
+body{
+    height: fit-content;
+}
 .Trangchitiet{
     display: flex;
     flex-direction: column;
     margin: auto;
     background-color: #ffffff;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 50px 20px;
     border-radius: 10px;
     width: 70%;
+    height: fit-content;
 }
 .thongtinchitietsp{
     display: flex;
@@ -13,7 +17,7 @@
 .anhminhhoa{
     width: 50%;
     text-align: center;
-    height: 500px;
+    height: fit-content;
 }
 .anhminhhoa .mainimg{
     width: 100%;
@@ -21,6 +25,7 @@
 }
 .anhminhhoa .phuimg{
     width: 49%;
+    margin-top: 5px;
 }
 .thongtin h1{
     font-size: 30px;

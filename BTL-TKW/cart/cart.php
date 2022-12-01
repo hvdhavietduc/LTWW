@@ -8,7 +8,15 @@
     <title>Cart</title>
 </head>
 <body>
-    <div class="container">
+<?php
+        include "../header/header.php";
+
+    ?>
+    <style>
+    <?php include '../header/header.css';
+    ?>
+    </style>
+    <div class="container" style="padding:0 0 40px 0;">
         <div class="row">
 
             <!-- in cart -->
@@ -89,7 +97,7 @@
                         <li>Phí vận chuyển sẽ được tính ở trang thanh toán</li>
                         <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán</li>
                     </ul>
-                    <a role="button" class="btn btn-dark btn-block" href="/buyer_info.html">THANH TOÁN NGAY (Áp dụng cho Việt Nam)</a>
+                    <a role="button" class="btn btn-dark btn-block" href="buyer_info.php">THANH TOÁN NGAY (Áp dụng cho Việt Nam)</a>
                     <button type="button" class="btn btn-primary btn-block">ĐẶT HÀNG QUỐC TẾ (Cho các quốc gia khác)</button>
                 </div>
             </div>
@@ -97,6 +105,14 @@
         </div>
 
     </div>
-    
+    <?php
+        include "../footer/footer.php"
+    ?>
+    <style>
+        <?php
+        include "../footer/footer.css"
+        
+        ?>
+    </style>
 </body>
 </html>

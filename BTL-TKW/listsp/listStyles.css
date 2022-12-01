@@ -5,7 +5,9 @@ body {
 
 .container {
   width: 100%;
-  margin: 0 auto;
+}
+.row{
+  width: 100%;
 }
 .imgheader{
   width: 100%;
@@ -17,23 +19,17 @@ h1 {
   text-align: center;
 }
 
-.product-items {
-  padding: 30px;
-}
-
-.product-item {
-  float: left;
-  width: 23%;
+.itempro{
   height: 400px;
-  margin: 1%;
-  padding: 10px;
-  box-sizing: border-box;
+  margin-top: 5px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  line-height: 26px;
 }
 .nameandprice{
   width: 100%;
-  height: 20%;
+  height: 30%;
 }
 .product-item label {
   font-weight: bold;
@@ -86,8 +82,9 @@ a {
 }
 
 .buy-button {
-  margin: 10px 30% ;
-  width: 200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
  
 }
 

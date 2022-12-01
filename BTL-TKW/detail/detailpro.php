@@ -14,6 +14,13 @@
         include "../Database_connect/database.php";
         $db=new Database();
     ?>
+    <?php
+        include "../header/header.php";
+
+    ?>
+    <style>
+        <?php include '../header/header.css'; ?>
+    </style>
     <div class="Trangchitiet">
         <?php
             $id = $_GET['id'];
@@ -99,6 +106,13 @@
     <?php
         include "../footer/footer.php"
     ?>
+    <style>
+        <?php
+        include "../footer/footer.css"
+        
+        ?>
+    </style>
+    
 </body>
 <script>
     function decrease(){

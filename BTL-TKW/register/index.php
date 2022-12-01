@@ -12,7 +12,10 @@
         <?php include "../header/header.css" ?>
     </style>
     <div class="loginbox">
-        <img src="avatar.png" class="avatar">
+      <div class="avt">
+      <img src="avatar.png" class="avatar">
+      </div>
+
         <h1>Register</h1>
         <form action="connect.php" method="post">
             <p>Username</p>

@@ -13,7 +13,10 @@
         <?php include '../header/header.css'; ?>
     </style>
     <div class="loginbox">
-        <img src="avatar.png" class="avatar">
+      <div class="avt">
+      <img src="avatar.png" class="avatar">
+        
+      </div>
         <h1>Reset Password</h1>
         <form>
             <p>Username</p>
