@@ -1,0 +1,27 @@
+
+body {
+    background-color: whitesmoke;
+}
+
+.box {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.btn {
+    margin-bottom: 10px;
+}
+
+.item-cart {
+    height: 100px;
+}
+
+#item-details {
+    font-size: 0.7rem;
+}
+
+.breadcrumb-style {
+    background-color: none;
+}
