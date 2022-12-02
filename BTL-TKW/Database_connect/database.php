@@ -29,22 +29,18 @@ class Database{
     $result = $this->link-> real_escape_string($_GET[$id]);
     return $result;
   }
-  public function insertProduct($name, $price, $des, $linkimg){
-    $sql = "INSERT INTO product (namepro, price, despro, linkimg)
-    VALUES ('$name', '$price', '$des',  '$linkimg')";
+  public function insertProduct($name, $des, $linkimg, $price, $gender){
+    $sql = "INSERT INTO tblproduct (name, description, 	linkimg, price, gender)
+    VALUES ('$name', '$des', '$linkimg',  '$price', '$gender')";
     $result=$this->link->query($sql);
     return $result;
   }
-  public function deleteProduct($id){
-    $sql = "DELETE FROM product WHERE id=$id";
+  public function deletepro($id){
+    $sql = "DELETE FROM tblproduct WHERE id='$id'";
     $result=$this->link->query($sql);
-    header('Location:c.php');
+    header('Location:../manage_product/manage.php');
     return $result;
   }
-  public function editProduct($id,$name, $price, $des, $linkimg){
-    $sql = "UPDATE product SET namepro='$name', price='$price', despro='$des',linkimg='$linkimg' WHERE id=$id";
-    $result=$this->link->query($sql);
-    return $result;
-  }
+
 }
 ?>
