@@ -25,8 +25,8 @@ class Database{
       echo "Select fail";
     }
   }
-  public function real_escape_string($id){
-    $result = $this->link-> real_escape_string($_GET[$id]);
+  public function real_escape_string($string){
+    $result = $this->link-> real_escape_string($string);
     return $result;
   }
   public function insertProduct($name, $des, $linkimg, $price, $gender){
@@ -39,6 +39,11 @@ class Database{
     $sql = "DELETE FROM tblproduct WHERE id='$id'";
     $result=$this->link->query($sql);
     header('Location:../manage_product/manage.php');
+    return $result;
+  }
+  public function updatepro($id,$name, $des, $linkimg, $price, $gender){
+    $sql = "Update tblproduct SET name='$name', description='$des',linkimg='$linkimg', price='$price', gender='$gender' WHERE id='$id'";
+    $result=$this->link->query($sql);
     return $result;
   }
 
