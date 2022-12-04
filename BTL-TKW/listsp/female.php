@@ -14,7 +14,8 @@
 
     ?>
     <style>
-        <?php include '../header/header.css'; ?>
+    <?php include '../header/header.css';
+    ?>
     </style>
     <?php
     include "../Database_connect/database.php";
@@ -36,7 +37,7 @@
     $totalPages = ceil($totalRecords / $item_per_page);
     ?>
     <div class="imgheader">
-            <img src="../img/front_img.jpg">
+        <img src="../img/front_img.jpg">
     </div>
     <div class="container">
         <h1>Danh sách sản phẩm nữ</h1>
@@ -45,10 +46,12 @@
             <div class="product-item  col-lg-3 col-md-4 col-sm-6">
                 <div class="itempro">
                     <div class="product-img">
-                        <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>" title="<?= $row["name"] ?>" ></img></a>
+                        <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>"
+                                title="<?= $row["name"] ?>"></img></a>
                     </div>
                     <div class="nameandprice">
-                        <strong><a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
+                        <strong><a
+                                href="../detail/detailpro.php?id=<?= $row["id"] ?>"><?= $row["name"] ?></a></strong><br />
                         <label>Giá: </label><span class="product-price"><?= number_format(
                         $row["price"],
                         0,
@@ -56,7 +59,7 @@
                         "."
                         ) ?> đ</span><br />
                     </div>
-                    
+
                     <div class="buy-button">
                         <a href="../detail/detailpro.php?id=<?= $row["id"] ?>">Mua sản phẩm</a>
                     </div>
@@ -73,10 +76,9 @@
         include "../footer/footer.php"
     ?>
     <style>
-        <?php
-        include "../footer/footer.css"
-        
-        ?>
+    <?php include "../footer/footer.css"
+
+    ?>
     </style>
 </body>
 

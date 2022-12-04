@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <?php
         include "../Database_connect/database.php";
@@ -19,7 +21,8 @@
 
     ?>
     <style>
-        <?php include '../header/header.css'; ?>
+    <?php include '../header/header.css';
+    ?>
     </style>
     <div class="Trangchitiet">
         <?php
@@ -30,22 +33,28 @@
         ?>
         <div class="thongtinchitietsp">
             <div class="anhminhhoa">
-                <img  src="<?= $row["linkimg"] ?>" alt="" class="mainimg"/>
+                <img src="<?= $row["linkimg"] ?>" alt="" class="mainimg" />
                 <div class="imgphu">
-                    <img  src="<?= $row["linkimg"] ?>" alt="" class="phuimg"/>
-                    <img  src="<?= $row["linkimg"] ?>" alt="" class="phuimg"/>
-                    <img  src="<?= $row["linkimg"] ?>" alt="" class="phuimg"/>
-                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg"/>
-                    <img  src="<?= $row["linkimg"] ?>" alt="" class="phuimg"/>
-                    <img src="https://product.hstatic.net/1000230642/product/do_size_giay_48e2e41300b2421d8798287cba268179.jpg" alt="" class="phuimg"/>
+                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg" />
+                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg" />
+                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg" />
+                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg" />
+                    <img src="<?= $row["linkimg"] ?>" alt="" class="phuimg" />
+                    <img src="https://product.hstatic.net/1000230642/product/do_size_giay_48e2e41300b2421d8798287cba268179.jpg"
+                        alt="" class="phuimg" />
                 </div>
-    
-                
+
+
             </div>
             <div class="thongtin">
                 <h1><?php echo $row["name"]?></h1>
                 <p>(Trắng)</p>
-                <h1 class='giatien'><?php echo $row["price"]?> đ</h1>
+                <h1 class="giatien"><span class="product-price"><?= number_format(
+                        $row["price"],
+                        0,
+                        ",",
+                        "."
+                        ) ?> đ</span></h1>
                 <p>Tình trạng: Còn hàng</p>
                 <h2>Kích thước</h2>
                 <span class='sizegiay'>37</span>
@@ -62,44 +71,46 @@
                     <span id="volume">1</span>
                     <button onclick=increase()>+</button>
                 </div>
+                </br>
                 <div class="dattruocandtv">
-                    <a href="../cart/cart.php?id=<?php echo $row["id"] ?>"><button class="dattruoc">Đặt trước</button></a>
+                    <a href="../cart/cart.php?id=<?php echo $row["id"] ?>"><button class="dattruoc">Đặt
+                            trước</button></a>
                     <button class="tuvan">Tư vấn: 0966 158 666</button>
                 </div>
                 <div class="card-header">
                     <a class="collapsed btn" data-bs-toggle="collapse" href="#motasp">
                         <h2>Mô tả sản phẩm</h2>
                     </a>
-                  </div>
+                </div>
                 <div id="motasp" class="collapse" data-bs-parent="#accordion">
-                <?php echo $row["description"]?>
+                    <?php echo $row["description"]?>
                 </div>
                 <div class="card-header">
                     <a class="collapsed btn" data-bs-toggle="collapse" href="#doisize">
-                      <h2>Chính sách đổi size</h2>
+                        <h2>Chính sách đổi size</h2>
                     </a>
-                  </div>
-                  <div id="doisize" class="collapse" data-bs-parent="#accordion">
-                        <p>
-                            1. Đổi kích cỡ giày
-                        </p>
-                        <p>
-                            Sản phẩm còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm, không bị dơ bẩn, trầy xước.
-                        </p>
-                        <p>
-                            Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).
-                        </p>
-                        <p>
-                            Trong vòng 7 ngày kể từ ngày nhận hàng.
-                        </p>
-                        <p>
-                            Áp dụng 01 sản phẩm được đổi lệch 01 size so với size đã mua và được đổi 01 lần.
-                        </p>
-                        <p>
-                            Không hỗ trợ đổi mẫu theo nhu cầu.
-                        </p>
-                        
-                  </div>
+                </div>
+                <div id="doisize" class="collapse" data-bs-parent="#accordion">
+                    <p>
+                        1. Đổi kích cỡ giày
+                    </p>
+                    <p>
+                        Sản phẩm còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm,
+                        không bị dơ bẩn, trầy xước.
+                    </p>
+                    <p>
+                        Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).
+                    </p>
+                    <p>
+                        Trong vòng 7 ngày kể từ ngày nhận hàng.
+                    </p>
+                    <p>
+                        Áp dụng 01 sản phẩm được đổi lệch 01 size so với size đã mua và được đổi 01 lần.
+                    </p>
+                    <p>
+                        Không hỗ trợ đổi mẫu theo nhu cầu.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -107,27 +118,28 @@
         include "../footer/footer.php"
     ?>
     <style>
-        <?php
-        include "../footer/footer.css"
-        
-        ?>
+    <?php include "../footer/footer.css"
+
+    ?>
     </style>
-    
+
 </body>
 <script>
-    function decrease(){
-        const volume=document.getElementById('volume');
-        x=Number(volume.innerText);
-        if(x!=1) x--;
-        volume.innerText=x;
+function decrease() {
+    const volume = document.getElementById('volume');
+    x = Number(volume.innerText);
+    if (x != 1) x--;
+    volume.innerText = x;
 
-    }
-    function increase(){
-        const volume=document.getElementById('volume');
-        x=Number(volume.innerText);
-        x++;
-        volume.innerText=x;
+}
 
-    }
+function increase() {
+    const volume = document.getElementById('volume');
+    x = Number(volume.innerText);
+    x++;
+    volume.innerText = x;
+
+}
 </script>
+
 </html>
