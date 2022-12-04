@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="listStyles.css" />
+    <link rel="stylesheet" href="Ad.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -38,9 +39,50 @@
     $totalRecords = $totalRecords->num_rows;
     $totalPages = ceil($totalRecords / $item_per_page);
     ?>
-    <div class="imgheader">
-        <img src="../img/imgheader.png">
+
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+                <img src="../img/imgheader.jpg" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../img/imgheader2.jpg" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../img/imgheader3.jpg" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../img/imgheader4.jpg" alt="" />
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
     </div>
+    <!--image slider end-->
+
+
     <div class="container">
         <h1>Danh sách sản phẩm nam</h1>
         <div class="row">
@@ -83,6 +125,8 @@
 
     ?>
     </style>
+
+    <script src="Ad.js"></script>
 </body>
 
 </html>
