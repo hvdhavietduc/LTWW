@@ -28,7 +28,7 @@
         </form>
     </div>
     <footer>
-    <?php include "../footer/index.html" ?>
+    <?php include "../footer/footer.php" ?>
     </footer>
   </body>
 
