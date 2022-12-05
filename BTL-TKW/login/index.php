@@ -7,7 +7,34 @@
   if (isset($_SESSION['username'])){
     unset($_SESSION['username']);
   }
-
+  $login_err="";
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    $conn=new mysqli('localhost','root','','btl_ltw');
+    if($conn->connect_error){
+      die('Connection failed : '.$conn->connect_error);
+    }
+  else{
+    $query="select * from tbluser where username='$username' and password='$password'";
+    $result=mysqli_query($conn,$query);
+    $count=mysqli_num_rows($result);
+    if ($count==0){
+      $login_err="Wrong username or password";
+    }
+    if (($username=="admin"&&$password="admin")){
+      echo "Welcome admin";
+      $_SESSION['username']=$username;
+      header("Location: ../admin.php");
+    }
+    else if ($count>0)
+    {
+      echo "login success";
+      $_SESSION['username']=$username;
+      header("Location: ../homepage/index.php");
+    }
+  }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -23,11 +50,16 @@
       <div class="loginbox">
         <img src="avatar.png" class="avatar">
         <h1>Login Here</h1>
-        <form method="post" action="connect.php">
+        <form method="POST">
             <p>Username</p>
             <input type="text" name="username" placeholder="Enter Username">
             <p>Password</p>
             <input type="password" name="password" placeholder="Enter Password">
+            <span>
+              <?php
+                echo $login_err;
+              ?>
+            </span> 
             <input type="submit" name="" value="Login"><br>
             <a href="../forgot your password/index.php">Lost your password?</a><br>
             <a href="../register/index.php">Don't have an account?</a>
