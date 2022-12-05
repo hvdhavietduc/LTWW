@@ -8,39 +8,28 @@
   </head>
   <body>
     <?php include "../header/header.php" ?>
-    <style>
-        <?php include "../header/header.css" ?>
-    </style>
     <div class="loginbox">
-      <div class="avt">
-      <img src="avatar.png" class="avatar">
-      </div>
-
+        <img src="avatar.png" class="avatar">
         <h1>Register</h1>
-        <form action="connect.php" method="post">
+        <form name="registerForm" action="validation.php"  method="post">
             <p>Username</p>
             <input type="text" name="username" placeholder="Enter Username" >
             <p>Password</p>
             <input type="password" name="password" placeholder="Enter Password" >
             <p>Confirm Password</p>
-            <input type="password" name=""placeholder="Re-enter Password">
+            <input type="password" name="repassword"placeholder="Re-enter Password">
             <p>Email</p>
             <input type="text" name="email" placeholder="Enter Email" name="email">
             <p>Phone Number</p>
             <input type="text" name="phone" placeholder="Enter Phone Number" name="phone"> 
-            <input type="submit" name="" value="Register"><br> 
+            <input type="submit" name="submit" value="Register"><br> 
             <a href="../login/index.php">Already had an account? Sign in</a>
 
         </form>
     </div>
-    <div class="row"></div>
-    <div class="footer">
-      <?php include "../footer/footer.php" ?>
-    </div>
-
-    <style>
-        <?php include "../footer/footer.css" ?>
-    </style>
+    <footer>
+    <?php include "../footer/index.html" ?>
+    </footer>
   </body>
 
 </html>
