@@ -1,6 +1,6 @@
 
 .loginbox{
-    width: 30%;
+    width: fit-content;
     height: fit-content;
     background: rgb(250, 250, 250);
     color: rgb(132, 194, 216);
