@@ -66,6 +66,7 @@
               if (isset($_SESSION['username']) && $_SESSION['username']=="admin"){
                 echo "../manage_product/manage.php";
               }
+              else if (isset($_SESSION['username'])) echo "../inforuser/inforuser.php";
               else echo "../login/index.php";
             ?>" 
             class="account_cart"><img src="../header/avatar.png" alt="HTML tutorial" style="width:42px;height:42px;">
