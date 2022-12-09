@@ -1,5 +1,7 @@
 
-
+<?php
+  session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +37,15 @@
                 <li><a href="#" class="topbar_list">Tìm cửa hàng</a></li>
                 <li><a href="#" class="topbar_list">Kiểm tra đơn hàng</a></li>
                 <li><a href="#" class="topbar_list">Mua hàng tại Shopify</a></li>
+                <li>
+                  <?php 
+                  if (isset($_SESSION['username'])){
+                    echo " | Welcome ". $_SESSION['username'];
+
+
+                    
+                  } ?> 
+                </li>
               </ul>
             </div>
           </div>
@@ -50,8 +61,10 @@
         </ul>
       </div>
     <div class="container">
-
-        <h3 class="col-md-12">Thêm sản phẩm</h3>
+        <div class="title">
+            <h3 class="col-md-12">Thêm sản phẩm</h3>
+        </div>
+        
 
         <form action="" method="post">
             <!-- ID -->

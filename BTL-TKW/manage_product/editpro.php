@@ -26,7 +26,9 @@
     ?>
     <div class="container">
 
-        <h3 class="col-md-12">Sửa sản phẩm</h3>
+        <div class="title">
+            <h3 class="col-md-12">Thêm sản phẩm</h3>
+        </div>
 
         <form action="" method="post">
             <!-- ID -->

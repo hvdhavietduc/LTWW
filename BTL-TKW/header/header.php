@@ -61,7 +61,14 @@
           }
           ?>
           
-          <a href="../login/index.php" class="account_cart"><img src="../header/avatar.png" alt="HTML tutorial" style="width:42px;height:42px;">
+          <a href="
+            <?php 
+              if (isset($_SESSION['username']) && $_SESSION['username']=="admin"){
+                echo "../manage_product/manage.php";
+              }
+              else echo "../login/index.php";
+            ?>" 
+            class="account_cart"><img src="../header/avatar.png" alt="HTML tutorial" style="width:42px;height:42px;">
           </a>
           <a href="#" class="account_cart"><img src="../header/cart.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
           
