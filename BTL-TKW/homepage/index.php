@@ -33,6 +33,9 @@
                   <?php 
                   if (isset($_SESSION['username'])){
                     echo " | Welcome ". $_SESSION['username'];
+
+
+                    
                   } ?> 
                 </li>
               </ul>
@@ -43,12 +46,19 @@
       <div class="navbar">
         <ul class="navbar">
           <li class="navbar"><a href="#" class="navbar" >Home</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/trangchu.php" class="navbar" >Cửa hàng</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/male.php" class="navbar">Nam</a></li>
-          <li class="navbar"><a href="../../../BTL-TKW/BTL-TKW/female .php" class="navbar">Nữ</a></li>
+          <li class="navbar"><a href="../listsp/trangchu.php" class="navbar" >Cửa hàng</a></li>
+          <li class="navbar"><a href="../listsp/male.php" class="navbar">Nam</a></li>
+          <li class="navbar"><a href="../listsp/female .php" class="navbar">Nữ</a></li>
           
         </ul>
         <div class="account_cart">
+          <?php
+          if (isset($_SESSION['username'])){
+            ?>
+            <a href="../login/index.php" class="account_cart"><img src="../header/backicon.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+            <?php
+          }
+          ?>
           <a href="../login/index.php" class="account_cart"><img src="avatar.png" alt="HTML tutorial" style="width:42px;height:42px;">
           </a>
           <a href="#" class="account_cart"><img src="cart.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>

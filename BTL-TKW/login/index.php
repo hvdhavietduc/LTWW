@@ -25,7 +25,7 @@
     if (($username=="admin"&&$password="admin")){
       echo "Welcome admin";
       $_SESSION['username']=$username;
-      header("Location: ../admin.php");
+      header("Location: ../manage_product/manage.php");
     }
     else if ($count>0)
     {
@@ -48,7 +48,10 @@
       <?php include "../header/header.php" ?>
 
       <div class="loginbox">
-        <img src="avatar.png" class="avatar">
+        <div class="avt">
+          <img src="avatar.png" class="avatar">
+        </div>
+       
         <h1>Login Here</h1>
         <form method="POST">
             <p>Username</p>

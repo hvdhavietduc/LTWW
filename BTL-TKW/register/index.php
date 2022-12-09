@@ -65,7 +65,9 @@
   <body>
     <?php include "../header/header.php" ?>
     <div class="loginbox">
-        <img src="avatar.png" class="avatar">
+    <div class="avt">
+          <img src="avatar.png" class="avatar">
+        </div>
         <h1>Register</h1>
         <form name="registerForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST">
             <p>Username</p>

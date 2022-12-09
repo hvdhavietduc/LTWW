@@ -86,7 +86,7 @@
         <h1>Danh sách sản phẩm</h1>
         <div class="row">
             <?php while ($row = mysqli_fetch_array($products)) { ?>
-            <div class="product-item  col-lg-3 col-md-4 col-sm-6">
+            <div class="product-item  col-lg-3 col-md-4 col-sm-6 col-6">
                 <div class="itempro">
                     <div class="product-img">
                         <a href="../detail/detailpro.php?id=<?= $row["id"] ?>"><img src="<?= $row["linkimg"] ?>"

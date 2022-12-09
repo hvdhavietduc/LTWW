@@ -67,7 +67,7 @@
 
             <div class="form-group text-center">
                 <button class="btn btn-primary" name="btnsubmitedit">Sửa</button>
-                <button class="btn btn-success"><a href="../manage_product/manage.php" class="link-dark">Quay lại</a></button>
+                <button class="btn btn-success" ><a href="../manage_product/manage.php" class="link-dark" style="color:white; text-decoration: none;">Quay lại</a></button>
             </div>
 
         </form>
