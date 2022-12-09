@@ -59,7 +59,7 @@
           <li class="navbar"><a href="../homepage/index.php" class="navbar" >Home</a></li>
           <li class="navbar"><a href="../listsp/trangchu.php" class="navbar" >Cửa hàng</a></li>
           <li class="navbar"><a href="../listsp/male.php" class="navbar">Nam</a></li>
-          <li class="navbar"><a href="../listsp/female .php" class="navbar">Nữ</a></li>
+          <li class="navbar"><a href="../listsp/female.php" class="navbar">Nữ</a></li>
           
         </ul>
       </div>

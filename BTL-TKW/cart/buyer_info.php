@@ -1,3 +1,7 @@
+
+<?php
+  session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,6 +29,14 @@
             $products =$db->select($sql);
             $row = mysqli_fetch_array($products);
      ?>
+     <?php
+     if(isset($_SESSION['username'])){
+        $username=$_SESSION['username'];
+        $sql1 = "SELECT * FROM tbluser where username='$username'";
+        $user = $db->select($sql1);
+        $row1 = mysqli_fetch_array($user);
+     }
+     ?>
     <div class="container" style="padding:0 0 40px 0;">
         <div class="row">
 
@@ -39,22 +51,28 @@
                     </ol>
                 </nav>
                 <h4 style="margin-bottom: 1rem;">Thông tin đơn hàng</h4>
-                <div style="margin-bottom: 1rem;">Bạn đã có tài khoản? <a href="#">Đăng nhập</a></div>
+                <?php
+                    if(!isset($_SESSION['username'])){
+                ?>
+                <div style="margin-bottom: 1rem;">Bạn đã có tài khoản? <a href="../login/index.php">Đăng nhập</a></div>
+                <?php
+                    }
+                ?>
                 <!-- form -->
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Họ và tên">
+                        <input type="text" class="form-control" placeholder="Họ và tên" value="<?php if(isset($_SESSION['username']))echo $row1['name']?>">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8 col-sm-12">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" value="<?php if(isset($_SESSION['username']))echo $row1['email']?>">
                         </div>
                         <div class="form-group col-md-4 col-sm-12">
-                            <input type="tel" class="form-control" placeholder="Số điện thoại">
+                            <input type="tel" class="form-control" placeholder="Số điện thoại" value="<?php if(isset($_SESSION['username']))echo $row1['phone']?>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Địa chỉ">
+                        <input type="text" class="form-control" placeholder="Địa chỉ"  value="<?php if(isset($_SESSION['username']))echo $row1['address']?>">
                     </div>                    
                     <div class="form-row">
                         <div class="form-group col-md-4">
