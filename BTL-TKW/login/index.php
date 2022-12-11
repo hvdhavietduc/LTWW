@@ -20,7 +20,7 @@
     $result=mysqli_query($conn,$query);
     $count=mysqli_num_rows($result);
     if ($count==0){
-      $login_err="Wrong username or password";
+      $login_err="* Wrong username or password";
     }
     if (($username=="admin"&&$password="admin")){
       echo "Welcome admin";
@@ -58,7 +58,7 @@
             <input type="text" name="username" placeholder="Enter Username">
             <p>Password</p>
             <input type="password" name="password" placeholder="Enter Password">
-            <span>
+            <span style="color:red;">
               <?php
                 echo $login_err;
               ?>

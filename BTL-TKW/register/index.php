@@ -65,41 +65,41 @@
   <body>
     <?php include "../header/header.php" ?>
     <div class="loginbox">
-    <div class="avt">
+      <div class="avt">
           <img src="avatar.png" class="avatar">
         </div>
         <h1>Register</h1>
         <form name="registerForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST">
             <p>Username</p>
             <input type="text" name="username" placeholder="Enter Username" >
-            <span>
+            <span style="color:red;">
               <?php
                 echo $username_err;
               ?>
             </span>
             <p>Password</p>
             <input type="password" name="password" placeholder="Enter Password" >
-            <span>
+            <span style="color:red;">
               <?php
                 echo $password_err;
               ?>
-            </span>
+            </span style="color:red;">
             <p>Confirm Password</p>
             <input type="password" name="repassword"placeholder="Re-enter Password">
-            <span>
+            <span style="color:red;">
               <?php
                 echo $repassword_err;
               ?>
             </span>
             <p>Email</p>
             <input type="text" name="email" placeholder="Enter Email" name="email">
-            <span>
+            <span style="color:red;">
               <?php
                 echo $email_err;
               ?>
             </span>
             <p>Phone Number</p>
-            <span>
+            <span style="color:red;">
               <?php
                 echo $phone_err;
               ?>
